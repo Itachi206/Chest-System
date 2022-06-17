@@ -2,20 +2,22 @@ using UnityEngine;
 
 public class ChestModel
 {
-    public ChestTypeEnum _ChestType;
-    public int _MinCoins;
-    public int _MaxCoins;
-    public int _MinGems;
-    public int _MaxGems;
-    public float _ChestOpenTime;
+    public ChestTypeEnum ChestType;
+    public Sprite ChestSprite;
+    public int MinCoins;
+    public int MaxCoins;
+    public int MinGems;
+    public int MaxGems;
+    public float ChestOpenTime;
 
     public ChestModel(ChestSO _chestSO)
     {
-        _ChestType = _chestSO.chestType;
-        _MinCoins = _chestSO.minCoins;
-        _MaxCoins = _chestSO.maxCoins;
-        _MinGems = _chestSO.minGems;
-        _MaxGems = _chestSO.maxGems;
-        _ChestOpenTime = _chestSO.timeToOpenChest;
+        ChestType = _chestSO.chestType;
+        ChestSprite = _chestSO.chestSprite;
+        MinCoins = _chestSO.minCoins;
+        MaxCoins = _chestSO.maxCoins;
+        MinGems = _chestSO.minGems;
+        MaxGems = _chestSO.maxGems;
+        ChestOpenTime = _chestSO.timeToOpenChest;
     }
 }
