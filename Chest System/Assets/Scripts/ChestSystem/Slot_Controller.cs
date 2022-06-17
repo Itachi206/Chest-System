@@ -10,13 +10,15 @@ public class Slot_Controller : MonoBehaviour
     private void Start()
     {
         //chestView.slotController = this;
+
         IsSlotEmpty = true;
     }
 
     public void SpawnRandomChest()
     {
-        //ChestService.Instance.CreateNewChest(chestView);
         chestView.gameObject.SetActive(true);
+        //ChestService.Instance.CreateNewChest(chestView);
+        //chestView.chestController.InitializeLockedChest();
         IsSlotEmpty = false;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonoSingleTon<T> : MonoBehaviour where T : MonoSingleTon<T>
 {
-    public static T instance;
+    private static T instance;
     public static T Instance { get { return instance; } }
 
     protected virtual void Awake()

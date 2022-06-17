@@ -400,6 +400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 517844090}
+  - component: {fileID: 517844091}
   m_Layer: 5
   m_Name: CoinGemsUI
   m_TagString: Untagged
@@ -428,6 +429,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &517844091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517844089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edb2a7d5d8fdb040bd39fd6a4c298bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitialCoins: 100
+  InitialGems: 100
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,7 +997,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 159.75433, w: 36.725197}
+  m_margin: {x: 0, y: 0, z: 55.996094, w: 36.725197}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1297,7 +1312,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -954, y: 655.19995}
+  m_AnchoredPosition: {x: -774, y: 655.19995}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1310790169
@@ -1455,7 +1470,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 159.75433, w: 36.725197}
+  m_margin: {x: 0, y: 0, z: 53.74054, w: 36.725197}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1498,7 +1513,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eeef4d64289a2704aa51ce7ac936f634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestSlot_Controller: {fileID: 1645099525}
+  TotalCoins: {fileID: 1484826730}
+  TotalGems: {fileID: 781683873}
 --- !u!4 &1633675403
 Transform:
   m_ObjectHideFlags: 0
