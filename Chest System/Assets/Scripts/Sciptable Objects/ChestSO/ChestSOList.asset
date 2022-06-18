@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bba2ff8e39de0a245ae7a934c49a1989, type: 3}
   m_Name: ChestSOList
   m_EditorClassIdentifier: 
-  ChestList:
-  - {fileID: 11400000, guid: 17da07eb119929b46990edb09ca28484, type: 2}
-  - {fileID: 11400000, guid: f5cb26ebcefa67b4e96437a4e58a66e4, type: 2}
-  - {fileID: 11400000, guid: a1e3b206bc0c56c41b8f5934b1108fc1, type: 2}
-  - {fileID: 11400000, guid: 016382b422ddbea4cbc4056fbe23a553, type: 2}
+  chestLayouts:
+  - ChestTypes: 1
+    ChestSO: {fileID: 11400000, guid: 17da07eb119929b46990edb09ca28484, type: 2}
+  - ChestTypes: 2
+    ChestSO: {fileID: 11400000, guid: f5cb26ebcefa67b4e96437a4e58a66e4, type: 2}
+  - ChestTypes: 3
+    ChestSO: {fileID: 11400000, guid: a1e3b206bc0c56c41b8f5934b1108fc1, type: 2}
+  - ChestTypes: 4
+    ChestSO: {fileID: 11400000, guid: 016382b422ddbea4cbc4056fbe23a553, type: 2}

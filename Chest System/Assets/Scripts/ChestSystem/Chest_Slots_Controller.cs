@@ -19,7 +19,7 @@ public class Chest_Slots_Controller : MonoBehaviour
             return;
         }
         Debug.Log("Slots are filling" + slot);
-        Slots[slot].SpawnRandomChest();
+        Slots[slot].SpawnRandomChest(chestSOList.chestLayouts[Random.Range(0, chestSOList.chestLayouts.Length)].ChestSO);
     }
 
     private int CheckSlotIsEmpty()

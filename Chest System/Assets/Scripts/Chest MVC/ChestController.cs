@@ -9,10 +9,8 @@ public class ChestController
     public ChestController(ChestView _chestView, ChestModel _chestModel)
     {
         chestModel = _chestModel;
-        chestView = GameObject.Instantiate<ChestView>(_chestView);
-
-        chestView.SetChestController(this);
-
+        chestView = _chestView;
+        chestView.chestController = this;
         InitializeLockedChest();
     }
 

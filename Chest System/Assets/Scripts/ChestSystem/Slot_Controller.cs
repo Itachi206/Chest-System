@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class Slot_Controller : MonoBehaviour
 {
+    public ChestController chestController;
+    [SerializeField] private ChestSOList chestSOList;
     public ChestView chestView;
     public bool IsSlotEmpty;
 
     private void Start()
     {
-        //chestView.slotController = this;
-
+        chestView.slotController = this;
         IsSlotEmpty = true;
     }
 
-    public void SpawnRandomChest()
+    public void SpawnRandomChest(ChestSO _chestSO)
     {
-        chestView.gameObject.SetActive(true);
-        //ChestService.Instance.CreateNewChest(chestView);
-        //chestView.chestController.InitializeLockedChest();
+        Debug.Log(_chestSO.chestType);
+        chestController = ChestService.Instance.CreateNewChest(_chestSO, chestView);
         IsSlotEmpty = false;
     }
 }

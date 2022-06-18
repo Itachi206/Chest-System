@@ -20,7 +20,7 @@ public class ChestView : MonoBehaviour
 
     private void InitializeEmptyChest()
     {
-        //chestSprite.image.sprite = null;
+        gameObject.SetActive(true);
     }
 
     public void SetChestController(ChestController _chestController)

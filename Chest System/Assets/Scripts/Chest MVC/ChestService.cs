@@ -8,11 +8,10 @@ public class ChestService : MonoSingleTon<ChestService>
     public ChestView chestView;
     public ChestSOList Chests;
 
-    public void CreateNewChest(ChestView _chestView)
+    public ChestController CreateNewChest(ChestSO _chestSO, ChestView _chestView)
     {
-        int index = UnityEngine.Random.Range(0, Chests.ChestList.Length);
-        ChestSO RandomChestSO = Chests.ChestList[index];
-        ChestModel chestModel = new ChestModel(RandomChestSO);
+        ChestModel chestModel = new ChestModel(_chestSO);
         ChestController chestController = new ChestController(_chestView, chestModel);
+        return chestController;
     }
 }
