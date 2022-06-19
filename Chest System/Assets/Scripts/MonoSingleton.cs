@@ -11,12 +11,11 @@ public class MonoSingleTon<T> : MonoBehaviour where T : MonoSingleTon<T>
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(this);
             instance = (T)this;
         }
         else
         {
-            Destroy(instance);
+            Destroy(this);
         }
     }
 }

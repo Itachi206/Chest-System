@@ -6,6 +6,7 @@ using TMPro;
 
 public class ChestSystemManager : MonoSingleTon<ChestSystemManager>
 {
+    [SerializeField] public GameObject ChestPopUp;
     [SerializeField] public TextMeshProUGUI TotalCoins;
     [SerializeField] public TextMeshProUGUI TotalGems;
     

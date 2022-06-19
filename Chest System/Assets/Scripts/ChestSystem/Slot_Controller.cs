@@ -20,5 +20,5 @@ public class Slot_Controller : MonoBehaviour
         Debug.Log(_chestSO.chestType);
         chestController = ChestService.Instance.CreateNewChest(_chestSO, chestView);
         IsSlotEmpty = false;
-    }
+    }    
 }

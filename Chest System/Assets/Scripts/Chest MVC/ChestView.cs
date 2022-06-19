@@ -10,6 +10,9 @@ public class ChestView : MonoBehaviour
     public ChestController chestController;
     public Slot_Controller slotController;
 
+    public GameObject EmptyChestBox;
+    public GameObject FillChestBox;
+
     public Button chestSprite;
     public TextMeshProUGUI chestTypeName;
 
@@ -20,12 +23,20 @@ public class ChestView : MonoBehaviour
 
     private void InitializeEmptyChest()
     {
-        gameObject.SetActive(true);
+        EmptyChestBox.SetActive(true);
+        FillChestBox.SetActive(false);
+        chestSprite.image.sprite = null;
     }
 
     public void SetChestController(ChestController _chestController)
     {
         chestController = _chestController;
+    }
+
+    public void ChestButtonClick()
+    {
+        Debug.Log("chestview button click");
+        chestController.OnChestButtonClick();
     }
 
 

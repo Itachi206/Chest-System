@@ -16,8 +16,15 @@ public class ChestController
 
     public void InitializeLockedChest()
     {
-        chestView.gameObject.SetActive(true);
+        chestView.EmptyChestBox.SetActive(false);
+        chestView.FillChestBox.SetActive(true);
         chestView.chestSprite.image.sprite = chestModel.ChestSprite;
         chestView.chestTypeName.text = chestModel.ChestType.ToString();
+    }
+
+    public void OnChestButtonClick()
+    {
+        ChestSystemManager.Instance.ChestPopUp.SetActive(true);
+        Debug.Log("Chest pe Click ho raha hai benchod");
     }
 }
