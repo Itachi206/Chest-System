@@ -6,6 +6,7 @@ using UnityEngine;
 public class ChestSO : ScriptableObject
 {
     public ChestTypeEnum chestType;
+    public Sprite chestSprite;
 
     public int minCoins;
     public int maxCoins;

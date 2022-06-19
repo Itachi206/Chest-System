@@ -3,21 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChestService : MonoBehaviour
+public class ChestService : MonoSingleTon<ChestService>
 {
     public ChestView chestView;
     public ChestSOList Chests;
 
-    private void Start()
+    public ChestController CreateNewChest(ChestSO _chestSO, ChestView _chestView)
     {
-        CreateNewChest();
-    }
-
-    private void CreateNewChest()
-    {
-        int index = UnityEngine.Random.Range(0, Chests.ChestList.Length);
-        ChestSO RandomChestSO = Chests.ChestList[index];
-        ChestModel chestModel = new ChestModel(RandomChestSO);
-        ChestController chestController = new ChestController(chestView, chestModel);
+        ChestModel chestModel = new ChestModel(_chestSO);
+        ChestController chestController = new ChestController(_chestView, chestModel);
+        return chestController;
     }
 }

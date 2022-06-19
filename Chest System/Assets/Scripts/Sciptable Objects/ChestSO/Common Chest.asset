@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Common Chest
   m_EditorClassIdentifier: 
   chestType: 1
+  chestSprite: {fileID: 21300000, guid: bcd92ae382fe44649b7cc927116e6e29, type: 3}
   minCoins: 100
   maxCoins: 200
   minGems: 10
