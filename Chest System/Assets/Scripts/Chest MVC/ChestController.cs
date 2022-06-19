@@ -25,6 +25,9 @@ public class ChestController
     public void OnChestButtonClick()
     {
         ChestSystemManager.Instance.ChestPopUp.SetActive(true);
+        ChestOpeningPopUp.Instance.chestPopUpTitle.text = chestModel.ChestType.ToString() + " Chest";
+        ChestOpeningPopUp.Instance.ExpectedRewardCoins.text = chestModel.MinCoins.ToString() + " - " + chestModel.MaxCoins.ToString();
+        ChestOpeningPopUp.Instance.ExpectedRewardGems.text = chestModel.MinGems.ToString() + " - " + chestModel.MaxGems.ToString();
         Debug.Log("Chest pe Click ho raha hai benchod");
     }
 }
