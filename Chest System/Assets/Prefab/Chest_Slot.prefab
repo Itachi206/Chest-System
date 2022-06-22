@@ -110,7 +110,7 @@ MonoBehaviour:
   slotController: {fileID: 5868504817109743379}
   EmptyChestBox: {fileID: 4747151890329760536}
   FillChestBox: {fileID: 3742630284086811232}
-  TimeLeft: 100
+  TimeLeft: 0
   UnlockTime: 0
   chestSprite: {fileID: 1103710726229387278}
   chestTypeName: {fileID: 8112661457772687338}

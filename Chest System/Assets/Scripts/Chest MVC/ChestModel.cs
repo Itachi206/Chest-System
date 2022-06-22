@@ -8,7 +8,7 @@ public class ChestModel
     public int MaxCoins;
     public int MinGems;
     public int MaxGems;
-    public int ChestOpenTime;
+    public float ChestOpenTime;
     public int CoinRequiredToOpenChest;
     public int GemsRequiredToOpenChest;
 
