@@ -14,7 +14,9 @@ public class ChestSO : ScriptableObject
     public int minGems;
     public int maxGems;
 
-    public float timeToOpenChest;
+    public int timeToOpenChest;
+    public int coinRequiredToOpenChest;
+    public int gemsrequiredToOpenChest;
 }
 
 

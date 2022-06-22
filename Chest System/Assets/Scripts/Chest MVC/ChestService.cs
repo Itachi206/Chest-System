@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ChestService : MonoSingleTon<ChestService>
 {
+    public ChestController CurrentController;
     public ChestView chestView;
     public ChestSOList Chests;
 
@@ -14,4 +15,15 @@ public class ChestService : MonoSingleTon<ChestService>
         ChestController chestController = new ChestController(_chestView, chestModel);
         return chestController;
     }
+
+    public void OnCoinButtonClick()
+    {
+        CurrentController.chestView.ChangeState(CurrentController.chestView.unlockingState);
+    }
+
+    public void OnGemsButtonClick()
+    {
+        CurrentController.chestView.ChangeState(CurrentController.chestView.unlockingState);
+    }
+
 }

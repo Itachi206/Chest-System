@@ -8,7 +8,9 @@ public class ChestModel
     public int MaxCoins;
     public int MinGems;
     public int MaxGems;
-    public float ChestOpenTime;
+    public int ChestOpenTime;
+    public int CoinRequiredToOpenChest;
+    public int GemsRequiredToOpenChest;
 
     public ChestModel(ChestSO _chestSO)
     {
@@ -19,5 +21,7 @@ public class ChestModel
         MinGems = _chestSO.minGems;
         MaxGems = _chestSO.maxGems;
         ChestOpenTime = _chestSO.timeToOpenChest;
+        CoinRequiredToOpenChest = _chestSO.coinRequiredToOpenChest;
+        GemsRequiredToOpenChest = _chestSO.gemsrequiredToOpenChest;
     }
 }

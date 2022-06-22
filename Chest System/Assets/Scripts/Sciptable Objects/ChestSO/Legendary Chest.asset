@@ -18,4 +18,6 @@ MonoBehaviour:
   maxCoins: 1200
   minGems: 80
   maxGems: 100
-  timeToOpenChest: 180
+  timeToOpenChest: 5
+  coinRequiredToOpenChest: 35
+  gemsrequiredToOpenChest: 35
