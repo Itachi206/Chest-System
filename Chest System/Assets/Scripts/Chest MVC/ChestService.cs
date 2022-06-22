@@ -18,12 +18,13 @@ public class ChestService : MonoSingleTon<ChestService>
 
     public void OnCoinButtonClick()
     {
+        CoinGemManager.Instance.DecreaseCoins(CurrentController.chestModel.CoinRequiredToOpenChest);
         CurrentController.chestView.ChangeState(CurrentController.chestView.unlockingState);
     }
 
     public void OnGemsButtonClick()
     {
-        CurrentController.chestView.ChangeState(CurrentController.chestView.unlockingState);
+        CoinGemManager.Instance.DecreaseCoins(CurrentController.chestModel.GemsRequiredToOpenChest);
+        CurrentController.chestView.ChangeState(CurrentController.chestView.unlockedState);
     }
-
 }

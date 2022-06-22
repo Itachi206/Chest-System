@@ -18,11 +18,9 @@ public class ChestView : MonoBehaviour
     public GameObject EmptyChestBox;
     public GameObject FillChestBox;      
     
-    internal bool IsTimerRunning;
+    public bool IsTimerRunning;
     public float TimeLeft;
     public float UnlockTime;
-
-    //internal ChestState CurrentState;
 
     public Button chestSprite;
     public TextMeshProUGUI chestTypeName;
@@ -30,14 +28,21 @@ public class ChestView : MonoBehaviour
     private void Start()
     {
         InitializeEmptyChest();
-        //InitializeChestState();
+        InitializeChestState();
+    }
+
+    private void Update()
+    {
+        //if (IsTimerRunning)
+        //    chestController.TimerCountDownFunction();
+        currentState.OnUpdate(ChestService.Instance.CurrentController.chestView); 
     }    
 
-    //private void InitializeChestState()
-    //{
-    //    currentState = lockedState;
-    //    currentState.OnStateEnter(this);
-    //}
+    private void InitializeChestState()
+    {
+        currentState = null; ;
+        //currentState.OnStateEnter(this);
+    }
 
     public void ChangeState(ChestState _State)
     {
@@ -62,6 +67,11 @@ public class ChestView : MonoBehaviour
     public void ChestButtonClick()
     {
         chestController.OnChestButtonClick();
+    }
+
+    public void DestroyObject()
+    {
+        Destroy(this);
     }
 
 
